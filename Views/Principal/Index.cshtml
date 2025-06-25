@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Pagina Principal";
+}
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FGS Prototipo</title>
+    <link rel="stylesheet" href="~/css/index.css" />
+
+    @section Scripts {
+        <script src="~/js/index.js"></script>
+    }
+
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <section class="header2">
+        <img src="https://www.se.senai.br/assets/img/logo.png" alt="">
+
+        <nav class="menu">
+            <button class="menu-item">Início</button>
+            <button class="menu-item">Institucional</button>
+            <button class="menu-item">Para Você</button>
+            <button class="menu-item">Fale Conosco</button>
+        </nav>
+
+    </section>
+
+    <section class="banner">
+
+        <section class="container">
+            <h1>MENU</h1>
+            <h2>FERRAMENTAS PRINCIPAIS</h2>
+        </section>
+    </section>
+
+
+    <div class="container2">
+        <nav class="menu">
+            <ul class="menu-level">
+                <li>
+                    <a href="#" onclick="toggleIcon(event)">
+                        <span class="icon">
+                            <img id="menu-icon" src="/IMG/chevron-down-solid.svg" width="20vh" alt="Menu Icon">
+                        </span>
+                        Solicitações e Manutenção
+                    </a>
+
+                    <ul class="submenu">
+                        <li>
+                            <a asp-action="Criar" asp-controller="Principal" class="">
+                                Criar Solicitação
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-action="editar" asp-controller="Principal" class="">
+                                Editar Solicitações 
+                            </a>
+                        </li>
+                    </ul>
+        </nav>
+    </div>
+    </section>
+
+
+</body>
+
+<footer>
+
+</footer>
+
+</html>

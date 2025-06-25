@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FGS Prototipo</title>
+    <link rel="stylesheet" href="~/css/criar.css" />
+
+</head>
+
+<header>
+</header>
+
+<section class="header2">
+    <a href="/PAGINA PRINCIPAL/paginaprincipal.html">
+        <img src="https://www.se.senai.br/assets/img/logo.png" alt="Logo">
+    </a>
+
+
+    <nav class="menu">
+        <button class="menu-item">Início</button>
+        <button class="menu-item">Institucional</button>
+        <button class="menu-item">Para Você</button>
+        <button class="menu-item">Fale Conosco</button>
+    </nav>
+
+</section>
+
+
+<body>
+
+    <div class="titulo">
+    <h1>Criar Solicitação</h1>
+</div>
+
+    <section class="container">
+
+        <form action="confirm.html" method="get">
+            <label for="sala">Selecione a sala:</label>
+            <select id="sala" name="sala" required>
+                <option value="" disabled selected>Escolha uma sala</option>
+                <option value="1">LAB I</option>
+                <option value="2">LAB II</option>
+                <option value="3">LAB III</option>
+                <option value="4">LAB IV</option>
+                <option value="5">LAB V</option>
+            </select>
+
+            <br><br>
+
+            <label for="computador">Número do computador:</label>
+            <input type="number" id="computador" name="computador" min="1" max="40" required>
+            <br><br>
+
+            <label for="mensagem">Descrição da reclamação:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" cols="30" placeholder="Descreva o problema aqui..."
+                required></textarea>
+            <br><br>
+
+            <button type="submit">Enviar Reclamação</button>
+        </form>
+    </section>
+</body>
+
+</html>

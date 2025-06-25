@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\REMAX\\Documents\\VsCode\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj": {}
+    "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj": {}
   },
   "projects": {
-    "C:\\Users\\REMAX\\Documents\\VsCode\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj": {
+    "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\REMAX\\Documents\\VsCode\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj",
+        "projectUniqueName": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj",
         "projectName": "Projeto_Dotnet8",
-        "projectPath": "C:\\Users\\REMAX\\Documents\\VsCode\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj",
-        "packagesPath": "C:\\Users\\REMAX\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\REMAX\\Documents\\VsCode\\Projeto_Dotnet8\\obj\\",
+        "projectPath": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj",
+        "packagesPath": "C:\\Users\\Aluno SENAI.C308-LAB3-036\\.nuget\\packages\\",
+        "outputPath": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\REMAX\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Aluno SENAI.C308-LAB3-036\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.411/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
