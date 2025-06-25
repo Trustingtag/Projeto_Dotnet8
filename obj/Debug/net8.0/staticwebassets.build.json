@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TtUOHU39ZyZW+PXzgZPT1P7AIG5qKrbG9g9S3JJ/MAs=",
+  "Hash": "yGurnVCrE4b8dQCAD/mdqYyWil9CATC2YzS9ZKSmMwc=",
   "Source": "Projeto_Dotnet8",
   "BasePath": "_content/Projeto_Dotnet8",
   "Mode": "Default",
@@ -74,25 +74,6 @@
       "OriginalItemSpec": "wwwroot\\css\\criar.css"
     },
     {
-      "Identity": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\wwwroot\\css\\editar.css",
-      "SourceId": "Projeto_Dotnet8",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\wwwroot\\",
-      "BasePath": "_content/Projeto_Dotnet8",
-      "RelativePath": "css/editar.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\editar.css"
-    },
-    {
       "Identity": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\wwwroot\\css\\index.css",
       "SourceId": "Projeto_Dotnet8",
       "SourceType": "Discovered",
@@ -110,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\index.css"
+    },
+    {
+      "Identity": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\wwwroot\\css\\listar.css",
+      "SourceId": "Projeto_Dotnet8",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\wwwroot\\",
+      "BasePath": "_content/Projeto_Dotnet8",
+      "RelativePath": "css/listar.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\listar.css"
     },
     {
       "Identity": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\wwwroot\\favicon.ico",

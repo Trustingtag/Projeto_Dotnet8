@@ -22,16 +22,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbmNpcGFsXENyaWFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/.r/C\#/PROJETO_FINAL/Projeto_Dotnet8/Views/Principal/Editar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbmNpcGFsXEVkaXRhci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/.r/C\#/PROJETO_FINAL/Projeto_Dotnet8/Views/Principal/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbmNpcGFsXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/.r/C\#/PROJETO_FINAL/Projeto_Dotnet8/Views/Principal/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbmNpcGFsXExpc3Rhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/.r/C\#/PROJETO_FINAL/Projeto_Dotnet8/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/.r/C\#/PROJETO_FINAL/Projeto_Dotnet8/Views/Shared/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/.r/C\#/PROJETO_FINAL/Projeto_Dotnet8/Views/Shared/_ValidationScriptsPartial.cshtml]

@@ -18,7 +18,7 @@ public class Principal : Controller
         return View();
     }
 
-    public IActionResult Editar()
+    public IActionResult Listar()
     {
         return View();
     }

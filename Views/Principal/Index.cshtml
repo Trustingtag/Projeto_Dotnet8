@@ -16,20 +16,7 @@
 </head>
 
 <body>
-    <header>
-    </header>
-
-    <section class="header2">
-        <img src="https://www.se.senai.br/assets/img/logo.png" alt="">
-
-        <nav class="menu">
-            <button class="menu-item">Início</button>
-            <button class="menu-item">Institucional</button>
-            <button class="menu-item">Para Você</button>
-            <button class="menu-item">Fale Conosco</button>
-        </nav>
-
-    </section>
+    <partial name="_Header" />
 
     <section class="banner">
 
@@ -58,14 +45,14 @@
                             </a>
                         </li>
                         <li>
-                            <a asp-action="editar" asp-controller="Principal" class="">
-                                Editar Solicitações 
+                            <a asp-action="Listar" asp-controller="Principal" class="">
+                                Listar Solicitações
                             </a>
                         </li>
                     </ul>
         </nav>
     </div>
-    </section>
+</section>
 
 
 </body>

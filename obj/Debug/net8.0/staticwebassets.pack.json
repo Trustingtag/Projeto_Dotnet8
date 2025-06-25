@@ -25,12 +25,12 @@
       "PackagePath": "staticwebassets\\css\\criar.css"
     },
     {
-      "Id": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\wwwroot\\css\\editar.css",
-      "PackagePath": "staticwebassets\\css\\editar.css"
-    },
-    {
       "Id": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\wwwroot\\css\\index.css",
       "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\wwwroot\\css\\listar.css",
+      "PackagePath": "staticwebassets\\css\\listar.css"
     },
     {
       "Id": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\wwwroot\\favicon.ico",
