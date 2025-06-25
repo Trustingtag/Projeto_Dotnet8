@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 
 namespace Projeto_Dotnet8.Models
 {
-    public class PrincipalModels
+    public class SalaModels
     {
+        public int ID { get; set; }
+        public string Sala_Num { get; set; }
         public List<ComputadorModels> Computadores { get; set; }
     }
 }
