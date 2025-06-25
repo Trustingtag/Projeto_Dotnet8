@@ -6,8 +6,8 @@ using Projeto_Dotnet8.Models;
 
 namespace Projeto_Dotnet8.Repository
 {
-    public interface ISalaRepository
+    public interface IcomputadorRepository
     {
-        SalaModels adicionar(SalaModels Sala);
+        ComputadorModels adicionar(ComputadorModels computador);
     }
 }

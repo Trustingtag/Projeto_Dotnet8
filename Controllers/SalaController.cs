@@ -1,17 +1,19 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_Dotnet8.Models;
+using Projeto_Dotnet8.Repository;
 
 namespace Projeto_Dotnet8.Controllers;
 
-public class Principal : Controller
+public class Sala : Controller
 {
-    private readonly ILogger<Principal> _logger;
+    private readonly ISalaRepository sala_Repository;
 
-    public Principal(ILogger<Principal> logger)
+    public Sala(ISalaRepository salaRepository)
     {
-        _logger = logger;
+        sala_Repository = salaRepository;
     }
+
 
     public IActionResult Index()
     {
@@ -26,6 +28,12 @@ public class Principal : Controller
     public IActionResult Criar()
     {
         return View();
+    }
+    [HttpPost]
+    public IActionResult Criar(SalaModels sala)
+    {
+        sala_Repository.adicionar(sala);
+        return RedirectToAction("Index");
     }
 
     public IActionResult Excluir()

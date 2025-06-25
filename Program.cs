@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 using Projeto_Dotnet8.Data;
+using Microsoft.Extensions.DependencyInjection;
+using Projeto_Dotnet8.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,9 @@ builder.Services.AddDbContext<BancoContext>(opt =>
 {
     opt.UseMySql(MySqlConnection, ServerVersion.AutoDetect(MySqlConnection));
 });
+
+builder.Services.AddScoped<IcomputadorRepository, ComputadorRepository>();
+builder.Services.AddScoped<ISalaRepository, SalaRepository>();
 
 var app = builder.Build();
 
