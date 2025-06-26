@@ -1,0 +1,35 @@
+@model Projeto_Dotnet8.Models.ComputadorModels
+@{
+    ViewData["Title"] = "Criar Computador";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FGS Prototipo</title>
+    <link rel="stylesheet" href="~/css/criarPC.css" />
+
+    @section Scripts {
+        <script src="~/js/index.js"></script>
+    }
+</head>
+
+<body>
+    <partial name="_Header" />
+
+    <div class="titulo">
+        <h1>Criar Computador</h1>
+    </div>
+
+    <section class="container">
+        <form asp-controller="Computador" asp-action="CriarPc" method="post">
+            <div class="form-floating mb-3">
+                <input asp-for="Nome" class="form-control" placeholder="Nome do Computador" />
+                <label asp-for="Nome">Nome do Computador</label>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn-primary" type="submit">Enviar</button>
+            </div>
+        </form>
+    </section>
+</body>

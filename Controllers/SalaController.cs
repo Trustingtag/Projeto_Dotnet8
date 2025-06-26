@@ -22,7 +22,8 @@ public class Sala : Controller
 
     public IActionResult Listar()
     {
-        return View();
+        List<ComputadorModels> computadores = sala_Repository.ListarComputadores();
+        return View("~/Views/Principal/Listar.cshtml", computadores);
     }
 
     public IActionResult Criar()

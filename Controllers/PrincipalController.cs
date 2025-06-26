@@ -20,7 +20,7 @@ public class Principal : Controller
 
     public IActionResult Listar()
     {
-        return View();
+        return RedirectToAction("Listar", "Sala");
     }
 
     public IActionResult Criar()
@@ -28,10 +28,7 @@ public class Principal : Controller
         return View();
     }
 
-    public IActionResult CriarPC()
-    {
-        return View();
-    }
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

@@ -9,5 +9,6 @@ namespace Projeto_Dotnet8.Repository
     public interface ISalaRepository
     {
         SalaModels adicionar(SalaModels Sala);
+        List<ComputadorModels> ListarComputadores();
     }
 }

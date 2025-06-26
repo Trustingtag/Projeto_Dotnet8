@@ -15,12 +15,18 @@ namespace Projeto_Dotnet8.Repository
         {
             salaContext = sala_Context;
         }
+
         public SalaModels adicionar(SalaModels Sala)
         {
             salaContext.Salas.Add(Sala);
             salaContext.SaveChanges();
             return Sala;
         }
-        
+
+        //Utilizando a sala para fazer a listagem dos computadores
+        public List<ComputadorModels> ListarComputadores()
+        {
+            return salaContext.Computadores.ToList();
+        }
     }
 }

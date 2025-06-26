@@ -16,7 +16,7 @@ public class Computador : Controller
 
     public IActionResult Index()
     {
-        return View();
+        return RedirectToAction("Index", "Principal");
     }
 
     public IActionResult Editar()
@@ -28,13 +28,16 @@ public class Computador : Controller
     {
         return View();
     }
+    public IActionResult CriarPC()
+    {
+        return View();
+    }
     [HttpPost]
-    public IActionResult Criar(ComputadorModels computador)
+    public IActionResult CriarPC(ComputadorModels computador)
     {
         computadorRepository.adicionar(computador);
         return RedirectToAction("Index");
     }
-
 
     public IActionResult Excluir()
     {
