@@ -28,6 +28,11 @@ public class Principal : Controller
         return View();
     }
 
+    public IActionResult CriarPC()
+    {
+        return View();
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

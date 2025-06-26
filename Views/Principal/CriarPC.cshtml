@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Criar Computador";
+}
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FGS Prototipo</title>
+    <link rel="stylesheet" href="~/css/criarPC.css" />
+
+    @section Scripts {
+        <script src="~/js/index.js"></script>
+    }
+
+</head>
+
+<body>
+    <partial name="_Header" />
+
+    <div class="titulo">
+        <h1>Criar Solicitação</h1>
+    </div>
+
+    <section class="container">
+
+        <div class="form-floating mb-3">
+            <input type="id" class="form-control" id="floatingInput" placeholder="ID">
+            <label for="floatingInput">ID do Computador</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
+            <label for="floatingPassword">Senha</label>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn-primary" type="button">Enviar</button>
+        </div>
+
+    </section>
+
+</body>

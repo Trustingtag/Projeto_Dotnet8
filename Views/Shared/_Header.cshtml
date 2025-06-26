@@ -2,14 +2,16 @@
 </header>
 
 <section class="header2">
-    <img src="https://www.se.senai.br/assets/img/logo.png" alt="">
+    <a asp-controller="Principal" asp-action="Index">
+        <img src="https://www.se.senai.br/assets/img/logo.png" alt="">
+    </a>
 
     <nav class="menu">
         <button class="menu-toggle" id="menuToggle">
             <img src="/IMG/Hamburger_icon.svg.png" alt="Menu" style="height:32px;width:32px;">
         </button>
         <div class="menu-items" id="menuItems">
-            <button class="menu-item">Início</button>
+            <a class="menu-item" asp-controller="Principal" asp-action="Index">Início</a>
             <button class="menu-item">Institucional</button>
             <button class="menu-item">Para Você</button>
             <button class="menu-item">Fale Conosco</button>

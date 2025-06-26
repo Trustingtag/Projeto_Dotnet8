@@ -6,7 +6,7 @@
 
 header{
     color: white;
-    height: 8vh;
+    height: 5vh;
     background-color: rgb(14,65,148);
 }
 
@@ -30,6 +30,7 @@ header{
     display: flex;
     justify-content: center;
     gap: 2vh;
+    flex-direction: column;
 }
 
 .menu-toggle {
@@ -60,6 +61,9 @@ header{
 .menu-item:hover{
     background-color: rgb(255, 255, 255);
     color: rgb(249, 166, 52);
+}
+.menu-item {
+    text-decoration: none;
 }
 
 .submenu {

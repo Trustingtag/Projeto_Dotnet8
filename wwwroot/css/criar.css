@@ -24,7 +24,7 @@ header{
 
 header {
     color: white;
-    height: 8vh;
+    height: 5vh;
     background-color: rgb(14,65,148);
 }
 
@@ -82,6 +82,9 @@ header {
 .menu-item:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(249, 166, 52);
+}
+.menu-item {
+    text-decoration: none;
 }
 
 @media (max-width: 990px) {
@@ -171,7 +174,7 @@ form button {
     width: 50%;
     align-self: center;
     color: white;
-    background-color: rgb(14,65,148);;
+    background-color: rgb(14,65,148);
     border: none;
     border-radius: 5px;
     cursor: pointer;
