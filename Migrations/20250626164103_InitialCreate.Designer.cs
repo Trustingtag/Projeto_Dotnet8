@@ -12,7 +12,7 @@ using Projeto_Dotnet8.Data;
 namespace Projeto_Dotnet8.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    [Migration("20250625115934_InitialCreate")]
+    [Migration("20250626164103_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

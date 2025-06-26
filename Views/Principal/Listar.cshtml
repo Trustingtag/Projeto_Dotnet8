@@ -33,20 +33,19 @@
             {
                 foreach (ComputadorModels computador in Model)
                 {
-                    <p>@computador.ID</p>
-                    <p>@computador.Nome</p>
-                   @*  <li>
+        
+                     <li>
                         <div class="computer-header">
                             <span>
                                 <span class="status-circle status-ok"></span>
-                                Computador 1
+                                <p>ID: @computador.ID <br> Nome: @computador.Nome</p>
                             </span>
                             <button class="dropdown-btn" onclick="toggleDropdown(this)">Detalhes</button>
                         </div>
                         <div class="dropdown-box" style="display:none;">
                             <textarea placeholder="Digite sua mensagem..."></textarea>
                         </div>
-                    </li> *@
+                    </li> 
 
                 }
             }
