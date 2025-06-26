@@ -18,7 +18,12 @@ public class Principal : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Listar()
+    {
+        return View();
+    }
+
+    public IActionResult Criar()
     {
         return View();
     }
