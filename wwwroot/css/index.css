@@ -225,7 +225,7 @@ body{
 }
 
 /* Responsivo */
-@media (max-width: 1043px) {
+@media (max-width: 1087px) {
     .menu-items {
         display: none;
         flex-direction: column;
