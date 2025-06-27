@@ -8,10 +8,12 @@ namespace Projeto_Dotnet8.Controllers;
 public class Computador : Controller
 {
     private readonly IcomputadorRepository computadorRepository;
+    private readonly ISalaRepository salaRepository; // Adicione isso
 
-    public Computador(IcomputadorRepository computador_Repository)
+    public Computador(IcomputadorRepository computador_Repository, ISalaRepository salaRepository)
     {
         computadorRepository = computador_Repository;
+        this.salaRepository = salaRepository;
     }
 
     public IActionResult Index()
@@ -30,12 +32,39 @@ public class Computador : Controller
     }
     public IActionResult CriarPC()
     {
-        return View();
+        var viewModel = new CriarPC_Sala
+        {
+            Computador = new ComputadorModels(),
+            Salas = salaRepository.ListarSalas() // Você vai precisar criar esse método
+        };
+        return View(viewModel);
     }
     [HttpPost]
-    public IActionResult CriarPC(ComputadorModels computador)
+    public IActionResult CriarPC(CriarPC_Sala model)
     {
-        computadorRepository.adicionar(computador);
+        if (!string.IsNullOrWhiteSpace(model.NovaSalaNum))
+        {
+            var novaSala = new SalaModels { Sala_Num = model.NovaSalaNum };
+            salaRepository.adicionar(novaSala);
+            model.SalaSelecionadaId = novaSala.ID;
+        }
+
+        // Validação: Limite de 5 computadores por sala
+        int salaId = (model.SalaSelecionadaId != 0) ? model.SalaSelecionadaId : 0;
+        var computadoresNaSala = computadorRepository.ListarPorSala(salaId)?.Count() ?? 0;
+        if (computadoresNaSala >= 5)
+        {
+            ModelState.AddModelError("", "Esta sala já possui o limite de 5 computadores.");
+            model.Salas = salaRepository.ListarSalas(); // Recarrega as salas para a view
+            return View(model);
+        }
+
+        if (salaId != 0)
+        {
+            var computador = model.Computador;
+            computador.SalaModelsID = salaId;
+            computadorRepository.adicionar(computador);
+        }
         return RedirectToAction("Index");
     }
 

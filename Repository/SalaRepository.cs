@@ -28,5 +28,10 @@ namespace Projeto_Dotnet8.Repository
         {
             return salaContext.Computadores.ToList();
         }
+
+        public List<SalaModels> ListarSalas()
+        {
+            return salaContext.Salas.ToList();
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Projeto_Dotnet8.Models.ComputadorModels>
+﻿@using Projeto_Dotnet8.Models
+@model IEnumerable<Projeto_Dotnet8.Models.ComputadorModels>
+
 @{
     ViewData["Title"] = "Listar Solicitações";
 }
@@ -17,39 +19,47 @@
 </head>
 
 
-<body>
+<bodusing Projeto_Dotnet8.Controllers; #line default <partial name="_Header" />
 
-    <partial name="_Header" />
+<div class="titulo">
+    <h1>Listar Solicitações</h1>
+</div>
 
-    <div class="titulo">
-        <h1>Listar Solicitações</h1>
-    </div>
+<section class="container">
 
-    <section class="container">
-
-        <ul class="computers-list">
-            @if (Model != null && Model.Any())
+    <ul class="computers-list">
+        @if (Model != null && Model.Any())
+        {
+            foreach (ComputadorModels computador in Model)
             {
-                foreach (ComputadorModels computador in Model)
-                {
-        
-                     <li>
-                        <div class="computer-header">
-                            <span>
-                                <span class="status-circle status-ok"></span>
-                                <p><b>ID:</b> @computador.ID <br> <b>Nome:</b> @computador.Nome <br> <b>Sala:</b></p>
-                            </span>
-                            <button class="dropdown-btn" onclick="toggleDropdown(this)">Detalhes</button>
-                        </div>
-                        <div class="dropdown-box" style="display:none;">
-                            <textarea placeholder="Digite sua mensagem..."></textarea>
-                        </div>
-                    </li> 
 
-                }
+                <li>
+                    <div class="computer-header">
+                        <span>
+                            <span class="status-circle status-ok"></span>
+                            <p><b>ID:</b> @computador.ID <br> <b>Nome:</b> @computador.Nome <br> <b>Sala:</b>
+                                @computador.SalaModelsID </p>
+                        </span>
+                        <button class="dropdown-btn" onclick="toggleDropdown(this)">Detalhes</button>
+                    </div>
+                    <div class="dropdown-box" style="display:none;">
+                        @if (computador.Mensagens != null && computador.Mensagens.Any())
+                        {
+                            foreach (var mensagem in computador.Mensagens)
+                            {
+                                <textarea readonly>@mensagem.Texto</textarea>
+                            }
+                        }
+                        else
+                        {
+                            <textarea readonly>Nenhuma mensagem cadastrada.</textarea>
+                        }
+                    </div>
+                </li>
+
             }
-        </ul>
+        }
+    </ul>
 
-        <a asp-controller="Principal" asp-action="Editar" id="editar">Editar</a>
-    </section>
-</body>
+    <a asp-controller="Principal" asp-action="Editar" id="editar">Editar</a>
+</section>

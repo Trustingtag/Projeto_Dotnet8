@@ -1,4 +1,4 @@
-@model Projeto_Dotnet8.Models.ComputadorModels
+@model Projeto_Dotnet8.Models.CriarPC_Sala;
 @{
     ViewData["Title"] = "Criar Computador";
 }
@@ -23,16 +23,24 @@
     <section class="container">
         <form asp-controller="Computador" asp-action="CriarPc" method="post">
             <div class="form-floating mb-3">
-                <input asp-for="Nome" class="form-control" placeholder="Nome do Computador" />
-                <label asp-for="Nome">Nome do Computador</label>
+                <input asp-for="Computador.Nome" class="form-control" placeholder="Nome do Computador" />
+                <label asp-for="Computador.Nome">Nome do Computador</label>
             </div>
-            @* --------------------------------------------------------------------------------- *@
-              <form asp-controller="Computador" asp-action="CriarPc" method="post"></form>
+             <div class="form-floating mb-3">
+                <select asp-for="SalaSelecionadaId" class="form-control">
+                    <option value="">Selecione a Sala</option>
+                    @foreach (var sala in Model.Salas)
+                    {
+                        <option value="@sala.ID">@sala.Sala_Num</option>
+                    }
+                </select>
+                <label asp-for="SalaSelecionadaId">Sala</label>
+            </div> 
+
             <div class="form-floating mb-3">
-                <input asp-for="Nome" class="form-control" placeholder="Sala do Computador" />
-                <label asp-for="Nome">Sala do Computador</label>
+                <input asp-for="NovaSalaNum" class="form-control" placeholder="Nova Sala (opcional)" />
+                <label asp-for="NovaSalaNum">Criar Nova Sala (opcional)</label>
             </div>
-            @* --------------------------------------------------------------------------------- *@
 
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn-primary" type="submit">Enviar</button>

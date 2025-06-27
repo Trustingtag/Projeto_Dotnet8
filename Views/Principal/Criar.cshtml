@@ -1,4 +1,4 @@
-﻿ @model IEnumerable<Projeto_Dotnet8.Models.ComputadorModels>
+﻿@model Projeto_Dotnet8.Models.ViewModel.CriarMensagem
 @{
     ViewData["Title"] = "Criar Solicitação";
 }
@@ -22,31 +22,24 @@
 
     <section class="container">
 
-        <form action="confirm.html" method="get">
+        <form asp-action="Criar" method="post">
             <label for="sala">Selecione a sala:</label>
-            <select id="sala" name="sala" required>
-                <option value="" disabled selected>Escolha uma sala</option>
-                <option value="1">LAB I</option>
-                <option value="2">LAB II</option>
-                <option value="3">LAB III</option>
-                <option value="4">LAB IV</option>
-                <option value="5">LAB V</option>
+            <select asp-for="SalaId" asp-items="@(new SelectList(Model.Salas, "ID", "Sala_Num"))" id="sala" name="SalaId" required>
+                <option value="">Escolha uma sala</option>
+            </select>
+            <button type="submit" name="carregar" value="true" formnovalidate>Carregar Computadores</button>
+
+            <label for="computador">Selecione o computador:</label>
+            <select asp-for="ComputadorId" asp-items="@(new SelectList(Model.Computadores, "ID", "Nome"))" id="computador" name="ComputadorId" required>
+                <option value="">Escolha um computador</option>
             </select>
 
-            <br><br>
+            <label for="mensagem">Mensagem:</label>
+            <textarea asp-for="Mensagem" id="mensagem" name="Mensagem" rows="5" cols="30" required></textarea>
 
-            <label for="computador">Número do computador:</label>
-            <input type="number" id="computador" name="computador" min="1" max="40" required>
-            <br><br>
-
-            <label for="mensagem">Descrição da reclamação:</label>
-            <textarea id="mensagem" name="mensagem" rows="5" cols="30" placeholder="Descreva o problema aqui..."
-                required></textarea>
-            <br><br>
-
-            <button type="submit">Enviar Reclamação</button>
+            <button type="submit">Enviar</button>
         </form>
-    </section>
+    </section>    </section>
 </body>
 
 </html>

@@ -15,5 +15,6 @@ namespace Projeto_Dotnet8.Data
 
         public DbSet<SalaModels> Salas { get; set; }
         public DbSet<ComputadorModels> Computadores { get; set; }
+        public DbSet<MensagemModels> Mensagens { get; set; }
     }
 }

@@ -10,5 +10,6 @@ namespace Projeto_Dotnet8.Repository
     {
         SalaModels adicionar(SalaModels Sala);
         List<ComputadorModels> ListarComputadores();
+        List<SalaModels> ListarSalas();
     }
 }

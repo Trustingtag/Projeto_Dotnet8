@@ -1,4 +1,4 @@
-@model IEnumerable<Projeto_Dotnet8.Models.ComputadorModels>
+@model Projeto_Dotnet8.Models.ComputadorModels
 @{
     ViewData["Title"] = "Confirmar Deletar";
 }
@@ -12,7 +12,9 @@
     @* @section Scripts {
         <script src="~/js/listar.js"></script>
     } *@
-
+usinusing Projeto_Dotnet8.Models;
+#line default
+e default
 
 </head>
 
@@ -26,9 +28,12 @@
     <section class="container">
 
         <h1>Confirmar Deletar</h1>
-        <p>Você tem certeza que deseja deletar este computador?</p>
+        <p>Você tem certeza que deseja deletar o Computador: @Model.Nome?</p>
 
-        <a asp-controller="Principal" asp-action="Listar" class="btn btn-success">Sim</a>
-        <a asp-controller="Principal" asp-action="Listar" class="btn btn-danger">Não</a>
+        <form asp-action="Deletar" method="post">
+            <input type="hidden" asp-for="ID" />
+            <button type="submit" class="btn btn-success">Sim</button>
+            <a asp-controller="Principal" asp-action="Editar" class="btn btn-danger">Não</a>
+        </form>
     </section>
 </body>
