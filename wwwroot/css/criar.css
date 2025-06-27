@@ -111,6 +111,12 @@ a.menu-item {
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         z-index: 100;
     }
+
+    @media (max-width: 880px) {
+        .banner{
+            
+        }
+    }
     .menu-items.open {
         display: flex;
     }
