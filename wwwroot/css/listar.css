@@ -63,6 +63,18 @@ header {
     position: relative;
 }
 
+a.menu-item {
+    color: rgb(56, 56, 56);
+    background-color: white;
+    border: none;
+    padding: 8px 14px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    text-align: center;
+}
+
 .menu-item:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(249, 166, 52);
@@ -71,7 +83,7 @@ header {
     text-decoration: none;
 }
 
-@media (max-width: 930px) {
+@media (max-width: 1043px) {
     .menu-items {
         display: none;
         flex-direction: column;
@@ -117,11 +129,12 @@ header {
 
 body{
     background-size: cover;
+    background-repeat: no-repeat;
     background:
     linear-gradient(100deg, rgba(37, 4, 121, 0.855), rgb(255 0 0 / 0%) 70.71%),
     linear-gradient(28deg, rgb(184, 0, 31), rgb(0 255 0 / 0%) 70.71%),
     linear-gradient(280deg, rgba(212, 96, 7, 0.904), rgb(0 0 255 / 0%) 70.71%);
-    height: 150vh;
+    height: auto;
 }
 
 .computers-list {
@@ -144,6 +157,7 @@ body{
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.447) 0px 2px 8px;
     transition: 0.5s;
+    font-size: 20px;
 }
 .dropdown-box {
     padding: 10px;
@@ -177,6 +191,7 @@ textarea {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     transition: 0.5s;
+    margin-bottom: 150px;
 }
 
 button {
@@ -196,6 +211,25 @@ button:hover {
     background-color: rgb(14, 65, 148);
     color: white;
     transition: 0.3s;
+}
+
+#editar{
+    background-color: rgb(14, 65, 148);
+    color: white;
+    width: 50%;
+    align-self: center;
+    font-size: 17px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+    text-align: center;
+}
+
+#editar:hover{
+    background-color: rgb(249, 166, 52);
+    color: white;
 }
 
 .status-circle {

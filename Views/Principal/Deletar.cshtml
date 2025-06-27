@@ -1,0 +1,34 @@
+@model IEnumerable<Projeto_Dotnet8.Models.ComputadorModels>
+@{
+    ViewData["Title"] = "Confirmar Deletar";
+}
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/deletar.css" />
+
+    @* @section Scripts {
+        <script src="~/js/listar.js"></script>
+    } *@
+
+
+</head>
+
+
+<body>
+
+    <partial name="_Header" />
+
+  
+
+    <section class="container">
+
+        <h1>Confirmar Deletar</h1>
+        <p>Você tem certeza que deseja deletar este computador?</p>
+
+        <a asp-controller="Principal" asp-action="Listar" class="btn btn-success">Sim</a>
+        <a asp-controller="Principal" asp-action="Listar" class="btn btn-danger">Não</a>
+    </section>
+</body>

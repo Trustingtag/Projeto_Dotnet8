@@ -70,6 +70,18 @@ header {
     position: relative;
 }
 
+a.menu-item {
+    color: rgb(56, 56, 56);
+    background-color: white;
+    border: none;
+    padding: 8px 14px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    text-align: center;
+}
+
 .menu-item:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(249, 166, 52);
@@ -78,7 +90,7 @@ header {
     text-decoration: none;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1043px) {
     .menu-items {
         display: none;
         flex-direction: column;
