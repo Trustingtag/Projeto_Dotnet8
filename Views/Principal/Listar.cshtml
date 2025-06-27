@@ -28,6 +28,7 @@
 <section class="container">
 
     <ul class="computers-list">
+        @* Laço de repetição para que todos os computadores criados sejam alcançados pelo código *@
         @if (Model != null && Model.Any())
         {
             foreach (ComputadorModels computador in Model)
@@ -36,6 +37,7 @@
                 <li>
                     <div class="computer-header">
                         <span>
+                            @* Apresentação dos dados de cada Computador *@
                             <span class="status-circle status-ok"></span>
                             <p><b>ID:</b> @computador.ID <br> <b>Nome:</b> @computador.Nome <br> <b>Sala:</b>
                                 @computador.SalaModelsID </p>
@@ -43,6 +45,7 @@
                         <button class="dropdown-btn" onclick="toggleDropdown(this)">Detalhes</button>
                     </div>
                     <div class="dropdown-box" style="display:none;">
+                        @* Mensagem que cada computador retem *@
                         @if (computador.Mensagens != null && computador.Mensagens.Any())
                         {
                             foreach (var mensagem in computador.Mensagens)

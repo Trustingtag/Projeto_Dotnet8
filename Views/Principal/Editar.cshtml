@@ -36,6 +36,7 @@
                     <div class="computer-header">
                         <span>
                             <span class="status-circle status-ok"></span>
+                            @* Redirecionamento para a página de Editar e Botão de VerificarExclusão *@
                             <p>
                                 <b>ID:</b> @computador.ID <br>
                                 <b>Nome:</b> @computador.Nome <br>
@@ -43,10 +44,6 @@
                                 <a asp-controller="Principal" asp-action="Deletar" asp-route-id="@computador.ID" class="btn btn-danger">Deletar</a>
                             </p>
                         </span>
-                        <button class="dropdown-btn" onclick="toggleDropdown(this)">Detalhes</button>
-                    </div>
-                    <div class="dropdown-box" style="display:none;">
-                        <textarea placeholder="Digite sua mensagem..."></textarea>
                     </div>
                 </li>
             }

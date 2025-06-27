@@ -23,25 +23,25 @@ namespace Projeto_Dotnet8.Repository
             computador_Context.SaveChanges();
             return Computador;
         }
-
+        /* Transformando em Lista os dados que são existentes que foram passados pelo parâmetro */
         public List<ComputadorModels> ListarPorSala(int salaId)
         {
             return computador_Context.Computadores.Where(c => c.SalaModelsID == salaId).ToList();
         }
 
-
+        /* Método para incluir as mensagens em cada computador na hora de sua Listagem  */
         public IEnumerable<ComputadorModels> ListarComputadores()
         {
             return computador_Context.Computadores
                 .Include(c => c.Mensagens)
                 .ToList();
         }
-
+        /* Buscar pelo Id dos computadores pelo parâmetro passado */
         public ComputadorModels BuscarPorId(int id)
         {
             return computador_Context.Computadores.FirstOrDefault(c => c.ID == id);
         }
-
+        /* Método para Deletar, que utiliza o BuscarPorId para realizar a identificação e a exclusão */
         public void Deletar(int id)
         {
             var computador = BuscarPorId(id);

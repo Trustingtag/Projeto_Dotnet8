@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\VSCODE\\PROJETO_FINAL\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj": {}
+    "C:\\Users\\REMAX\\Documents\\VsCode\\Projeto_Vers7\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj": {}
   },
   "projects": {
-    "C:\\VSCODE\\PROJETO_FINAL\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj": {
+    "C:\\Users\\REMAX\\Documents\\VsCode\\Projeto_Vers7\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\VSCODE\\PROJETO_FINAL\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj",
+        "projectUniqueName": "C:\\Users\\REMAX\\Documents\\VsCode\\Projeto_Vers7\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj",
         "projectName": "Projeto_Dotnet8",
-        "projectPath": "C:\\VSCODE\\PROJETO_FINAL\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\VSCODE\\PROJETO_FINAL\\Projeto_Dotnet8\\obj\\",
+        "projectPath": "C:\\Users\\REMAX\\Documents\\VsCode\\Projeto_Vers7\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj",
+        "packagesPath": "C:\\Users\\REMAX\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\REMAX\\Documents\\VsCode\\Projeto_Vers7\\Projeto_Dotnet8\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\REMAX\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -80,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.411/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

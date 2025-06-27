@@ -20,6 +20,7 @@ public class Sala : Controller
         return View();
     }
 
+    /* Levando os dados para o Listar da controller Principal */
     public IActionResult Listar()
     {
         List<ComputadorModels> computadores = sala_Repository.ListarComputadores();

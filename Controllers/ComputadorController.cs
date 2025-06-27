@@ -8,7 +8,7 @@ namespace Projeto_Dotnet8.Controllers;
 public class Computador : Controller
 {
     private readonly IcomputadorRepository computadorRepository;
-    private readonly ISalaRepository salaRepository; // Adicione isso
+    private readonly ISalaRepository salaRepository; 
 
     public Computador(IcomputadorRepository computador_Repository, ISalaRepository salaRepository)
     {
@@ -30,16 +30,19 @@ public class Computador : Controller
     {
         return View();
     }
+
+    /* Preparação para o recebimento dos Dados */
     public IActionResult CriarPC()
     {
         var viewModel = new CriarPC_Sala
         {
             Computador = new ComputadorModels(),
-            Salas = salaRepository.ListarSalas() // Você vai precisar criar esse método
+            Salas = salaRepository.ListarSalas()
         };
         return View(viewModel);
     }
     [HttpPost]
+    /* Criação de PCs e Salas e limitando a quantidade de PCs por Sala */
     public IActionResult CriarPC(CriarPC_Sala model)
     {
         if (!string.IsNullOrWhiteSpace(model.NovaSalaNum))
@@ -49,13 +52,12 @@ public class Computador : Controller
             model.SalaSelecionadaId = novaSala.ID;
         }
 
-        // Validação: Limite de 5 computadores por sala
         int salaId = (model.SalaSelecionadaId != 0) ? model.SalaSelecionadaId : 0;
         var computadoresNaSala = computadorRepository.ListarPorSala(salaId)?.Count() ?? 0;
         if (computadoresNaSala >= 5)
         {
             ModelState.AddModelError("", "Esta sala já possui o limite de 5 computadores.");
-            model.Salas = salaRepository.ListarSalas(); // Recarrega as salas para a view
+            model.Salas = salaRepository.ListarSalas();
             return View(model);
         }
 

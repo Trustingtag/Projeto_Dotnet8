@@ -9,6 +9,8 @@ namespace Projeto_Dotnet8.Repository
 {
     public interface IcomputadorRepository
     {
+        /* Criação dos métodos OBRIGATÓRIOS a existir  */
+
         List<ComputadorModels> ListarPorSala(int salaId);
         ComputadorModels adicionar(ComputadorModels computador);
         IEnumerable<ComputadorModels> ListarComputadores();

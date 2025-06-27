@@ -23,12 +23,17 @@
     <section class="container">
 
         <form asp-action="Criar" method="post">
+            
+            @* Procura de Sala existente, após a procura, verificar a existencia de Computadores presentes *@
             <label for="sala">Selecione a sala:</label>
             <select asp-for="SalaId" asp-items="@(new SelectList(Model.Salas, "ID", "Sala_Num"))" id="sala" name="SalaId" required>
                 <option value="">Escolha uma sala</option>
             </select>
+            
+            @* Botão para recarregar a página e fazer com que a parte de seleção de computadores seja carregada *@
             <button type="submit" name="carregar" value="true" formnovalidate>Carregar Computadores</button>
 
+            @* Área de seleção de computadores, para criar a mensagem ligada ao computador selecionado *@
             <label for="computador">Selecione o computador:</label>
             <select asp-for="ComputadorId" asp-items="@(new SelectList(Model.Computadores, "ID", "Nome"))" id="computador" name="ComputadorId" required>
                 <option value="">Escolha um computador</option>
