@@ -94,12 +94,17 @@ namespace Projeto_Dotnet8.Migrations
             modelBuilder.Entity("Projeto_Dotnet8.Models.MensagemModels", b =>
                 {
                     b.HasOne("Projeto_Dotnet8.Models.ComputadorModels", "Computador")
-                        .WithMany()
+                        .WithMany("Mensagens")
                         .HasForeignKey("ComputadorID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Computador");
+                });
+
+            modelBuilder.Entity("Projeto_Dotnet8.Models.ComputadorModels", b =>
+                {
+                    b.Navigation("Mensagens");
                 });
 
             modelBuilder.Entity("Projeto_Dotnet8.Models.SalaModels", b =>
