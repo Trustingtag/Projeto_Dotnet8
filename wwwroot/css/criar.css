@@ -191,8 +191,16 @@ form button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 20px;
 }
 
 form button:hover {
     background-color: rgb(249, 166, 52);
+}
+
+.carregar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }

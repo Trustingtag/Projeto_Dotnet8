@@ -153,14 +153,14 @@ p {
 }
 
 .btn.btn-success{
-    width: 50%;
+    width: 100%;
     justify-self: center;
     align-self: center;
     margin-bottom: 10px;
 }
 
 .btn.btn-danger{
-    width: 50%;
+    width: 100%;
     justify-self: center;
     align-self: center;
     margin-bottom: 10px;

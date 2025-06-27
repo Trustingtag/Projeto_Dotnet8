@@ -150,7 +150,7 @@ body{
 }
 .computer-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     background: #ffffff;
     padding: 10px;
@@ -159,6 +159,9 @@ body{
     box-shadow: rgba(0, 0, 0, 0.447) 0px 2px 8px;
     transition: 0.5s;
     font-size: 20px;
+}
+.computer-header .btn.btn-danger {
+    margin-left: auto;
 }
 .dropdown-box {
     padding: 10px;
@@ -233,7 +236,12 @@ button:hover {
     color: white;
 }
 
-.status-circle {
+.btn.btn-danger{
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+/* .status-circle {
     display: inline-block;
     width: 14px;
     height: 14px;
@@ -250,4 +258,4 @@ button:hover {
 }
 .status-error {
     background: #f44336;
-}
+} */
