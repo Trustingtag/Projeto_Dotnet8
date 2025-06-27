@@ -112,11 +112,6 @@ a.menu-item {
         z-index: 100;
     }
 
-    @media (max-width: 880px) {
-        .banner{
-            
-        }
-    }
     .menu-items.open {
         display: flex;
     }
@@ -198,6 +193,7 @@ form button {
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 form button:hover {
