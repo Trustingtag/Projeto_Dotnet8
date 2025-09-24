@@ -8464,19 +8464,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aluno SENAI.C308-LAB3-036\\.nuget\\packages\\": {}
+    "C:\\Users\\gabri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj",
+      "projectUniqueName": "C:\\Users\\gabri\\Documents\\G91147_SENAI\\Projeto\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj",
       "projectName": "Projeto_Dotnet8",
-      "projectPath": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj",
-      "packagesPath": "C:\\Users\\Aluno SENAI.C308-LAB3-036\\.nuget\\packages\\",
-      "outputPath": "C:\\.r\\C#\\PROJETO_FINAL\\Projeto_Dotnet8\\obj\\",
+      "projectPath": "C:\\Users\\gabri\\Documents\\G91147_SENAI\\Projeto\\Projeto_Dotnet8\\Projeto_Dotnet8.csproj",
+      "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gabri\\Documents\\G91147_SENAI\\Projeto\\Projeto_Dotnet8\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Aluno SENAI.C308-LAB3-036\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -8499,7 +8499,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -8541,7 +8542,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
