@@ -43,7 +43,9 @@
                             @* Apresentação dos dados de cada Computador *@
                             <span class="status-circle status-ok"></span>
                             <p><b>ID:</b> @computador.ID <br> <b>Nome:</b> @computador.Nome <br> <b>Sala:</b>
-                                @computador.SalaModelsID </p>
+                                @computador.SalaModelsID <br>
+                                <b>Postado em:</b> @computador.DataPostagem.ToString("dd/MM/yyyy HH:mm")
+                            </p>
                         </span>
                         <button class="dropdown-btn" onclick="toggleDropdown(this)">Detalhes</button>
                     </div>

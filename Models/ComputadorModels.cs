@@ -7,10 +7,11 @@ namespace Projeto_Dotnet8.Models
 {
     public class ComputadorModels
     {
-        public int ID { get; set; }
-        public string Nome { get; set; }
-        public int SalaModelsID { get; set; }
-        /* Trazendo Mensagens de MensagemModels, para a conexão e identificação entre as 2 Models */
-        public List<MensagemModels> Mensagens { get; set; }
+    public int ID { get; set; }
+    public string Nome { get; set; } = string.Empty;
+    public int SalaModelsID { get; set; }
+    public DateTime DataPostagem { get; set; } // Horário de criação/postagem
+    /* Trazendo Mensagens de MensagemModels, para a conexão e identificação entre as 2 Models */
+    public List<MensagemModels> Mensagens { get; set; } = new List<MensagemModels>();
     }
 }

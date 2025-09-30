@@ -65,6 +65,7 @@ public class Computador : Controller
         {
             var computador = model.Computador;
             computador.SalaModelsID = salaId;
+            computador.DataPostagem = DateTime.Now;
             computadorRepository.adicionar(computador);
         }
         return RedirectToAction("Index");
