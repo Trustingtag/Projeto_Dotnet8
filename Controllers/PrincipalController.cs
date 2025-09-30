@@ -105,4 +105,40 @@ public class Principal : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+    // GET: Principal/Solicitacao
+    [HttpGet]
+    public IActionResult Solicitacao(int SalaId)
+    {
+        var salas = salaRepository.ListarSalas();
+        var computadores = SalaId != 0 ? computadorRepository.ListarPorSala(SalaId) : new List<ComputadorModels>();
+        var viewModel = new CriarMensagem
+        {
+            SalaId = SalaId,
+            Salas = salas,
+            Computadores = computadores
+        };
+        return View(viewModel);
+    }
+
+    // POST: Principal/Solicitacao
+    [HttpPost]
+    public IActionResult Solicitacao(CriarMensagem model)
+    {
+        if (!string.IsNullOrWhiteSpace(model.Mensagem) && model.ComputadorId != 0)
+        {
+            var mensagem = new MensagemModels
+            {
+                Texto = model.Mensagem,
+                ComputadorID = model.ComputadorId
+            };
+            _context.Mensagens.Add(mensagem);
+            _context.SaveChanges();
+            return RedirectToAction("Listar");
+        }
+        // Recarregar listas caso falte algum campo
+        model.Salas = salaRepository.ListarSalas();
+        model.Computadores = model.SalaId != 0 ? computadorRepository.ListarPorSala(model.SalaId) : new List<ComputadorModels>();
+        return View(model);
+    }
 }
