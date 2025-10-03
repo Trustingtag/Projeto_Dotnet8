@@ -18,7 +18,7 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="~/css/criar.css" />
+    <link rel="stylesheet" href="~/css/solicitacao.css" />
 
 </head>
 
@@ -37,17 +37,20 @@
 
         @if (Model.Computadores != null && Model.Computadores.Any())
         {
-            <h3>Computadores da Sala Selecionada:</h3>
+            <h3>Computadores:</h3>
             <ul>
                 @foreach (var computador in Model.Computadores)
                 {
                     <li>
-                        <button type="button" onclick="toggleMensagemForm(@computador.ID)">Criar Mensagem para @computador.Nome</button>
+                        <button type="button" id="editar" onclick="toggleMensagemForm(@computador.ID)">Criar Mensagem para
+                            @computador.Nome</button>
+
                         <div id="mensagem-form-@computador.ID" style="display:none; margin-top:10px;">
                             <form asp-action="Solicitacao" asp-controller="Principal" method="post">
                                 <input type="hidden" name="SalaId" value="@Model.SalaId" />
                                 <input type="hidden" name="ComputadorId" value="@computador.ID" />
-                                <textarea name="Mensagem" rows="3" cols="30" placeholder="Digite sua mensagem..." required></textarea><br />
+                                <textarea name="Mensagem" rows="3" cols="30" placeholder="Digite sua mensagem..."
+                            required></textarea><br />
                                 <button type="submit">Enviar Mensagem</button>
                             </form>
                         </div>

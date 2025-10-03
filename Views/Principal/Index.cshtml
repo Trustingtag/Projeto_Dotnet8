@@ -14,52 +14,45 @@
 
 </head>
 
+
+    <partial name="_Header"/>
+
+    <a href="https://www.senaibahia.com.br/para-empresa/educacao-profissional/">
+    <section class="banner"></section>
+    </a>
+
 <body>
-    @* PUXA O HEADER COMPARTILHADO *@
-    <partial name="_Header" />
 
-    <section class="banner">
+        
+        <div class="container2">
+            <div class="ferramentas">
+            
+             <a asp-controller="Principal" asp-action="Criar" class="card-link">
+                <div id="card">
+                <img src="/IMG/t.webp" alt="">
+                    <p>Criar Notificação</p>
+                </div>
+            </a>
 
-        <section class="container">
-            <h1>MENU</h1>
-            <h2>FERRAMENTAS PRINCIPAIS</h2>
-        </section>
-    </section>
+             <a asp-controller="Computador" asp-action="CriarPC" class="card-link">
+                <div id="card">
+                <img src="/IMG/t1.webp" alt="">
+                    <p>Editar Notificações</p>
+                </div>
+            </a>
 
+            <a asp-controller="Principal" asp-action="Listar" class="card-link">
+                <div id="card">
+                <img src="/IMG/t2.webp" alt="">
+                    <p>Histórico de Notificações</p>
+                </div>
+            </a>
 
-    <div class="container2">
-        <nav class="menu">
-            <ul class="menu-level">
-                <li>
-                    <a href="#" onclick="toggleIcon(event)">
-                        <span class="icon">
-                            <img id="menu-icon" src="/IMG/chevron-down-solid.svg" width="20vh" alt="Menu Icon">
-                        </span>Solicitações e Ferramentas</a>
-
-                    <ul class="submenu">
-                        
-                        <li>
-                            <a asp-action="Login" asp-controller="Principal" class="">Login</a>
-                        </li>
-                        <li>
-                            <a asp-action="Criar" asp-controller="Principal" class="">Criar Solicitação</a>
-                        </li>
-                        <li>
-                            <a asp-action="Listar" asp-controller="Principal" class="">Listar Solicitações</a>
-                        </li>
-                        <li>
-                            <a asp-action="CriarPC" asp-controller="Computador" class="">Criar Computador e Sala</em></em></a>
-                        </li>
-                    </ul>
-        </nav>
-    </div>
-    </section>
-
+            </div>
+        </div>
 
 </body>
 
-<footer>
-
-</footer>
+<footer></footer>
 
 </html>
