@@ -20,7 +20,7 @@
         <h1>Criar Solicitação</h1>
     </div>
 
-    <section class="container">
+    
 
         <form asp-action="Criar" method="post">
 
@@ -31,13 +31,11 @@
                 <option value="">Escolha uma sala</option>
             </select>
 
-            @* Botão para ir para a página de solicitação *@
-            @* <button type="submit" class="carregar" formaction="/Principal/Solicitacao" formmethod="post" formnovalidate>Carregar Computadores</button> *@
             <button type="submit" class="carregar" asp-controller="Principal" asp-action="Solicitacao" formnovalidate>Carregar Computadores</button>
-            <a asp-controller="Principal" asp-action="Index" id="editar">Voltar</a>
+            <a asp-controller="Principal" asp-action="Index" id="secundario">Voltar</a>
         </form>
 
-    </section>
+
     </section>
 </body>
 
