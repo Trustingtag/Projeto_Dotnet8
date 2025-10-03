@@ -21,6 +21,10 @@ public class Principal : Controller
         _context = context;  
     }
 
+    public IActionResult Login()
+    {
+        return View();
+    }
     public IActionResult Index()
     {
         return View();
