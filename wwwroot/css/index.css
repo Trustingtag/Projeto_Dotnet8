@@ -125,9 +125,10 @@ body {
   padding-bottom: 10vh;
   align-items: center;
   justify-content: center;
-  background-size: auto;
-  background-position: 90% 1%;
+  background-size: cover;
+  background-position: fixed;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-image: url(../IMG/magicpattern-65O4Dw6-xLg-unsplash\ \(1\).jpg);
 }
 
